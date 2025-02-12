@@ -1,0 +1,29 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"  # ✅ Use stable Python version
+
+      - name: Install Dependencies
+        run: |
+          python -m venv .venv  # ✅ Create virtual environment
+          pip install --upgrade pip
+          pip install -r requirements.txt  # ✅ Install dependencies
+
+      - name: Run Tests
+        run: |
+          .venv/bin/python -m pytest --maxfail=1 --disable-warnings  # ✅ Use full path
