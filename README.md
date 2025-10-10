@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project is a RESTful API built with FastAPI for managing a book collection. It provides comprehensive CRUD (Create, Read, Update, Delete) operations for books with proper error handling, input validation, and Documentation.
+This project is a RESTful API built with FastAPI for managing a book collection. It provides comprehensive CRUD (Create, Read, Update, Delete) operations for books with proper error handling, input validation, and Documentation. 
+
+This project implements CI/CD pipelines using GitHub Actions to automate build, test, and deployment workflows — ensuring that every change pushed to the repository is automatically validated and deployed.![CI](https://github.com/username/repo/actions/workflows/deploy.yml/badge.svg)
 
 ## Features
 
